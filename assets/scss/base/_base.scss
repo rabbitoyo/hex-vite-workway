@@ -1,0 +1,13 @@
+*, *::before, *::after {
+    outline: auto;
+}
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    letter-spacing: 0.02em;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+}

@@ -1,6 +1,9 @@
-@import "../../node_modules/bootstrap/scss/functions";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&display=swap');
+
+@import "bootstrap/scss/functions";
 @import './utils/variables';
-@import "../../node_modules/bootstrap";
+@import './utils/variables-dark';
+@import "bootstrap";
 
 @import './layout/header';
 @import './layout/footer';
