@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>個人資料 - 職旅 Workway</title>
 	<link rel="icon" href="/hex-vite-workway/assets/favicon-DRAn0xKm.ico">
-  <script type="module" crossorigin src="/hex-vite-workway/assets/main-CaowrHZm.js"></script>
-  <link rel="stylesheet" crossorigin href="/hex-vite-workway/assets/main-r-mk3GEk.css">
+  <script type="module" crossorigin src="/hex-vite-workway/assets/main-BnUGfBb_.js"></script>
+  <link rel="stylesheet" crossorigin href="/hex-vite-workway/assets/main-BxV3DHez.css">
 </head>
 <body>
 	<nav class="navbar sticky-top navbar-expand-lg bg-white border-bottom">
@@ -45,28 +45,107 @@
 				<div class="col-10">
 					<ul class="nav nav-pills justify-content-center mb-6" id="pills-tab" role="tablist">
 						<li class="nav-item" role="presentation">
-							<button class="nav-link border active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+							<button class="nav-link border active" id="personal-account-tab" data-bs-toggle="pill" data-bs-target="#personal-account" type="button" role="tab" aria-controls="personal-account" aria-selected="true">
 								<span class="material-symbols-outlined fs-5 align-bottom">face</span>
 				  				個人資料
 							</button>
 						</li>
 						<li class="nav-item" role="presentation">
-							<button class="nav-link border" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+							<button class="nav-link border" id="reservation-record-tab" data-bs-toggle="pill" data-bs-target="#reservation-record" type="button" role="tab" aria-controls="reservation-record" aria-selected="false">
 								<span class="material-symbols-outlined fs-5 align-bottom">pending_actions</span>
 								預約紀錄
 							</button>
 						</li>
 						<li class="nav-item" role="presentation">
-							<button class="nav-link border" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+							<button class="nav-link border" id="career-plan-tab" data-bs-toggle="pill" data-bs-target="#career-plan" type="button" role="tab" aria-controls="career-plan" aria-selected="false">
 								<span class="material-symbols-outlined fs-5 align-bottom">list_alt</span>
 								職旅計劃
 							</button>
 						</li>
 					</ul>
-					<div class="tab-content" id="pills-tabContent">
-						<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">...</div>
-						<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
-						<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
+					<div class="tab-content p-9 bg-white rounded-4 shadow" id="pills-tabContent">
+						<div class="tab-pane fade show active" id="personal-account" role="tabpanel" aria-labelledby="personal-account-tab" tabindex="0">
+							<div class="d-flex justify-content-between mb-9">
+								<h2 class="h4 fw-medium">個人資料</h2>
+								<form class="w-100" action="" id="data">
+									<div class="mb-6">
+										<img class="avatar img-fluid rounded-circle border me-4" src="/hex-vite-workway/assets/avatar-QGHQ479s.png" alt="avatar">
+  										<input type="file" class="form-control d-none" id="upload-avatar">
+										<label class="form-label btn btn-outline-light align-bottom" for="upload-avatar">
+											<span class="material-symbols-outlined align-bottom fs-5">upload</span>
+											更新頭貼
+										</label>
+									</div>
+									<div class="form-floating mb-6">
+										<input type="text" class="form-control" id="username" placeholder="姓名" value="Mokumaru">
+										<label for="username">姓名</label>
+									</div>
+									<div class="mb-6">
+										<p class="mb-2">性別</p>
+										<div class="form-check form-check-inline ps-2">
+											<input class="form-check-input" type="radio" name="gender" id="female" value="女性" checked>
+											<label class="form-check-label ms-1" for="female">女性</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="gender" id="male" value="男性">
+											<label class="form-check-label ms-1" for="male">男性</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="gender" id="undisclosed" value="不願透露">
+											<label class="form-check-label ms-1" for="undisclosed">不願透露</label>
+										</div>
+									</div>
+									<div class="form-floating mb-6">
+										<input type="date" class="form-control" id="birth-date" placeholder="生日" value="2000-01-10">
+										<label for="birth-date">生日</label>
+									</div>
+									<div class="mb-6">
+										<p class="mb-2">密碼</p>
+										<button type="button" class="btn btn-outline-light pe-3" data-bs-toggle="modal" data-bs-target="#passwordModal">
+											修改密碼
+											<span class="material-symbols-outlined align-bottom fs-5">
+												chevron_right
+											</span>
+										</button>
+									</div>
+									<div class="form-floating mb-6">
+										<input type="email" class="form-control" id="email" placeholder="信箱" value="mokumaru@mail.com" aria-describedby="emailHelp">
+										<label for="email">信箱</label>
+										<div class="form-text ps-2" id="emailHelp">
+											盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信
+										</div>
+									</div>
+									<div class="form-floating mb-6">
+										<input type="tel" class="form-control" id="phone" placeholder="聯絡電話" value="09-1234-5678">
+										<label for="phone">聯絡電話</label>
+									</div>
+									<div class="form-floating">
+										<input type="tel" class="form-control" id="address" placeholder="通訊地址" value="高雄市三民區九如一路 87 號">
+										<label for="address">通訊地址</label>
+									</div>
+								</form>
+							</div>
+							<div class="d-flex justify-content-center">
+								<button type="button" class="btn btn-outline-light pe-3 me-6" id="resetBtn">
+									重新填寫
+									<span class="material-symbols-outlined align-bottom fs-5">
+										chevron_right
+									</span>
+								</button>
+								<button type="button" class="btn btn-dark pe-3">
+									儲存更新
+									<span class="material-symbols-outlined align-bottom fs-5">
+										chevron_right
+									</span>
+								</button>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="reservation-record" role="tabpanel" aria-labelledby="reservation-record-tab" tabindex="0">
+							
+						</div>
+						<div class="tab-pane fade" id="career-plan" role="tabpanel" aria-labelledby="career-plan-tab" tabindex="0">
+							
+						</div>
 					</div>
 				</div>
 			</div>
@@ -96,5 +175,41 @@
         </div>
     </div>
 </footer>
+	<!-- Modal -->
+	<div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title fs-5 fw-medium" id="passwordModalLabel">更新密碼</h3>
+					 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<span class="material-symbols-outlined fs-4">
+							close
+						</span>
+					 </button>
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<div class="form-floating mb-6">
+							<input type="tel" class="form-control" id="address" placeholder="新密碼" value="">
+							<label for="address">新密碼</label>
+						</div>
+						<div class="form-floating">
+							<input type="tel" class="form-control" id="address" placeholder="再次密碼" value="">
+							<label for="address">再次密碼</label>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-dark pe-3" data-bs-dismiss="modal">
+						更新密碼
+						<span class="material-symbols-outlined align-bottom fs-5">
+							chevron_right
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>
