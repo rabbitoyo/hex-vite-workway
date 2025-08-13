@@ -3,8 +3,12 @@
 }
 
 body {
-    font-family: "Noto Sans TC", sans-serif;
-    letter-spacing: 0.02em;
+    letter-spacing: .02em;
+}
+
+.font-family-inter {
+    font-family: $font-family-inter;
+    letter-spacing: 0;
 }
 
 a {

@@ -1,11 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 
-@import "bootstrap/scss/functions";
+// bootstrap
+@import 'bootstrap/scss/functions';
 @import './utils/variables';
 @import './utils/variables-dark';
-@import "bootstrap";
+@import 'bootstrap';
 
-@import './layout/header';
+// utils
+@import './utils/utilities';
+@import "bootstrap/scss/utilities/api";
+
+// base
+@import './base/base';
+
+// layout
+@import './layout/nav';
 @import './layout/footer';
 
+// pages
 @import './pages/index';
+@import './pages/account';

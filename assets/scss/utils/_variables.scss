@@ -6,8 +6,7 @@
 // Color system
 
 // scss-docs-start gray-color-variables
-// $white:    #fff !default;
-$white:    #FCFCFD;
+$white:    #FCFCFD; //#fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -17,9 +16,8 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-// $black:    #000 !default;
-$black:    #141A1F;
-$black-60: lighten($black, 60%);
+$black:    #141A1F; //#000 !default;
+$black-alpha:rgba($black, .6);
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -39,14 +37,14 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue:    #4A69E8; //#0d6efd !default;
+$blue:    #0d6efd !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;
-$red:     #E51300; //#dc3545 !default;
-$orange:  #F58F00; //#fd7e14 !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
-$green:   #47C20A; //#198754 !default;
+$green:   #198754 !default;
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
 // scss-docs-end color-variables
@@ -70,8 +68,8 @@ $colors: (
 ) !default;
 // scss-docs-end colors-map
 
-// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
-// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.2 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG/#contrast-minimum
 $min-contrast-ratio:   4.5 !default;
 
 // Customize the light and dark text colors for use in our color contrast function.
@@ -79,22 +77,15 @@ $color-contrast-dark:      $black !default;
 $color-contrast-light:     $white !default;
 
 // fusv-disable
-// $blue-100: tint-color($blue, 80%) !default;
-// $blue-200: tint-color($blue, 60%) !default;
-// $blue-300: tint-color($blue, 40%) !default;
-// $blue-400: tint-color($blue, 20%) !default;
-// $blue-500: $blue !default;
-// $blue-600: shade-color($blue, 20%) !default;
-// $blue-700: shade-color($blue, 40%) !default;
-// $blue-800: shade-color($blue, 60%) !default;
-// $blue-900: shade-color($blue, 80%) !default;
-$blue-25: #0E2271;
-$blue-40: #1736B5;
-$blue-60: $blue;
-$blue-70: #778EEE;
-$blue-80: #A4B4F3;
-$blue-90: #D2D9F9;
-$blue-97: #F1F4FD;
+$blue-100: tint-color($blue, 80%) !default;
+$blue-200: tint-color($blue, 60%) !default;
+$blue-300: tint-color($blue, 40%) !default;
+$blue-400: tint-color($blue, 20%) !default;
+$blue-500: $blue !default;
+$blue-600: shade-color($blue, 20%) !default;
+$blue-700: shade-color($blue, 40%) !default;
+$blue-800: shade-color($blue, 60%) !default;
+$blue-900: shade-color($blue, 80%) !default;
 
 $indigo-100: tint-color($indigo, 80%) !default;
 $indigo-200: tint-color($indigo, 60%) !default;
@@ -126,33 +117,25 @@ $pink-700: shade-color($pink, 40%) !default;
 $pink-800: shade-color($pink, 60%) !default;
 $pink-900: shade-color($pink, 80%) !default;
 
-// $red-100: tint-color($red, 80%) !default;
-// $red-200: tint-color($red, 60%) !default;
-// $red-300: tint-color($red, 40%) !default;
-// $red-400: tint-color($red, 20%) !default;
-// $red-500: $red !default;
-// $red-600: shade-color($red, 20%) !default;
-// $red-700: shade-color($red, 40%) !default;
-// $red-800: shade-color($red, 60%) !default;
-// $red-900: shade-color($red, 80%) !default;
+$red-100: tint-color($red, 80%) !default;
+$red-200: tint-color($red, 60%) !default;
+$red-300: tint-color($red, 40%) !default;
+$red-400: tint-color($red, 20%) !default;
+$red-500: $red !default;
+$red-600: shade-color($red, 20%) !default;
+$red-700: shade-color($red, 40%) !default;
+$red-800: shade-color($red, 60%) !default;
+$red-900: shade-color($red, 80%) !default;
 
-$red-45: #E51300;
-$red-70: #FF7467;
-$red-90: #FFD0CC;
-
-// $orange-100: tint-color($orange, 80%) !default;
-// $orange-200: tint-color($orange, 60%) !default;
-// $orange-300: tint-color($orange, 40%) !default;
-// $orange-400: tint-color($orange, 20%) !default;
-// $orange-500: $orange !default;
-// $orange-600: shade-color($orange, 20%) !default;
-// $orange-700: shade-color($orange, 40%) !default;
-// $orange-800: shade-color($orange, 60%) !default;
-// $orange-900: shade-color($orange, 80%) !default;
-
-$orange-35: #B26800;
-$orange-48: #F58F00;
-$orange-90: #FFEACC;
+$orange-100: tint-color($orange, 80%) !default;
+$orange-200: tint-color($orange, 60%) !default;
+$orange-300: tint-color($orange, 40%) !default;
+$orange-400: tint-color($orange, 20%) !default;
+$orange-500: $orange !default;
+$orange-600: shade-color($orange, 20%) !default;
+$orange-700: shade-color($orange, 40%) !default;
+$orange-800: shade-color($orange, 60%) !default;
+$orange-900: shade-color($orange, 80%) !default;
 
 $yellow-100: tint-color($yellow, 80%) !default;
 $yellow-200: tint-color($yellow, 60%) !default;
@@ -164,19 +147,15 @@ $yellow-700: shade-color($yellow, 40%) !default;
 $yellow-800: shade-color($yellow, 60%) !default;
 $yellow-900: shade-color($yellow, 80%) !default;
 
-// $green-100: tint-color($green, 80%) !default;
-// $green-200: tint-color($green, 60%) !default;
-// $green-300: tint-color($green, 40%) !default;
-// $green-400: tint-color($green, 20%) !default;
-// $green-500: $green !default;
-// $green-600: shade-color($green, 20%) !default;
-// $green-700: shade-color($green, 40%) !default;
-// $green-800: shade-color($green, 60%) !default;
-// $green-900: shade-color($green, 80%) !default;
-
-$green-30: #369108;
-$green-40: #47C20A;
-$green-90: #DEFCCF;
+$green-100: tint-color($green, 80%) !default;
+$green-200: tint-color($green, 60%) !default;
+$green-300: tint-color($green, 40%) !default;
+$green-400: tint-color($green, 20%) !default;
+$green-500: $green !default;
+$green-600: shade-color($green, 20%) !default;
+$green-700: shade-color($green, 40%) !default;
+$green-800: shade-color($green, 60%) !default;
+$green-900: shade-color($green, 80%) !default;
 
 $teal-100: tint-color($teal, 80%) !default;
 $teal-200: tint-color($teal, 60%) !default;
@@ -198,61 +177,17 @@ $cyan-700: shade-color($cyan, 40%) !default;
 $cyan-800: shade-color($cyan, 60%) !default;
 $cyan-900: shade-color($cyan, 80%) !default;
 
-// secondary
-$secondary-35: #268C6F;
-$secondary-50: #36C99F;
-$secondary-70: #87DEC5;
-$secondary-90: #D7F4EC;
-
-$secondary: (
-  "secondary-35": $secondary-35,
-  "secondary-50": $secondary-50,
-  "secondary-70": $secondary-70,
-  "secondary-90": $secondary-90
-);
-
-// natural
-$natural-10: #268C6F;
-$natural-30: #36C99F;
-$natural-50: #268C6F;
-$natural-60: #36C99F;
-$natural-75: #87DEC5;
-$natural-85: #D7F4EC;
-$natural-90: #87DEC5;
-$natural-95: #D7F4EC;
-
-$natural: (
-  "natural-10": $natural-10,
-  "natural-30": $natural-30,
-  "natural-50": $natural-50,
-  "natural-60": $natural-60,
-  "natural-75": $natural-75,
-  "natural-85": $natural-85,
-  "natural-90": $natural-90,
-  "natural-95": $natural-95
-);
-
-// $blues: (
-//   "blue-100": $blue-100,
-//   "blue-200": $blue-200,
-//   "blue-300": $blue-300,
-//   "blue-400": $blue-400,
-//   "blue-500": $blue-500,
-//   "blue-600": $blue-600,
-//   "blue-700": $blue-700,
-//   "blue-800": $blue-800,
-//   "blue-900": $blue-900
-// ) !default;
-
 $blues: (
-  "blue-25": $blue-25,
-  "blue-40": $blue-40,
-  "blue-60": $blue-60,
-  "blue-70": $blue-70,
-  "blue-80": $blue-80,
-  "blue-90": $blue-90,
-  "blue-97": $blue-97
-);
+  "blue-100": $blue-100,
+  "blue-200": $blue-200,
+  "blue-300": $blue-300,
+  "blue-400": $blue-400,
+  "blue-500": $blue-500,
+  "blue-600": $blue-600,
+  "blue-700": $blue-700,
+  "blue-800": $blue-800,
+  "blue-900": $blue-900
+) !default;
 
 $indigos: (
   "indigo-100": $indigo-100,
@@ -290,41 +225,29 @@ $pinks: (
   "pink-900": $pink-900
 ) !default;
 
-// $reds: (
-//   "red-100": $red-100,
-//   "red-200": $red-200,
-//   "red-300": $red-300,
-//   "red-400": $red-400,
-//   "red-500": $red-500,
-//   "red-600": $red-600,
-//   "red-700": $red-700,
-//   "red-800": $red-800,
-//   "red-900": $red-900
-// ) !default;
-
 $reds: (
-  "red-45": $red-45,
-  "red-70": $red-70,
-  "red-90": $red-90
-);
-
-// $oranges: (
-//   "orange-100": $orange-100,
-//   "orange-200": $orange-200,
-//   "orange-300": $orange-300,
-//   "orange-400": $orange-400,
-//   "orange-500": $orange-500,
-//   "orange-600": $orange-600,
-//   "orange-700": $orange-700,
-//   "orange-800": $orange-800,
-//   "orange-900": $orange-900
-// ) !default;
+  "red-100": $red-100,
+  "red-200": $red-200,
+  "red-300": $red-300,
+  "red-400": $red-400,
+  "red-500": $red-500,
+  "red-600": $red-600,
+  "red-700": $red-700,
+  "red-800": $red-800,
+  "red-900": $red-900
+) !default;
 
 $oranges: (
-  "orange-35": $orange-35,
-  "orange-48": $orange-48,
-  "orange-90": $orange-90
-);
+  "orange-100": $orange-100,
+  "orange-200": $orange-200,
+  "orange-300": $orange-300,
+  "orange-400": $orange-400,
+  "orange-500": $orange-500,
+  "orange-600": $orange-600,
+  "orange-700": $orange-700,
+  "orange-800": $orange-800,
+  "orange-900": $orange-900
+) !default;
 
 $yellows: (
   "yellow-100": $yellow-100,
@@ -338,23 +261,17 @@ $yellows: (
   "yellow-900": $yellow-900
 ) !default;
 
-// $greens: (
-//   "green-100": $green-100,
-//   "green-200": $green-200,
-//   "green-300": $green-300,
-//   "green-400": $green-400,
-//   "green-500": $green-500,
-//   "green-600": $green-600,
-//   "green-700": $green-700,
-//   "green-800": $green-800,
-//   "green-900": $green-900
-// ) !default;
-
 $greens: (
-  "green-30": $green-30,
-  "green-40": $green-40,
-  "green-90": $green-90
-);
+  "green-100": $green-100,
+  "green-200": $green-200,
+  "green-300": $green-300,
+  "green-400": $green-400,
+  "green-500": $green-500,
+  "green-600": $green-600,
+  "green-700": $green-700,
+  "green-800": $green-800,
+  "green-900": $green-900
+) !default;
 
 $teals: (
   "teal-100": $teal-100,
@@ -382,24 +299,85 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue; //$blue !default;
+$primary-97:    #F1F4FD;
+$primary-90:    #D2D9F9;
+$primary-80:    #A4B4F3;
+$primary-70:    #778EEE;
+$primary-60:    #4A69E8;
+$primary-40:    #1736B5;
+$primary-25:    #0E2271;
+$primary:       $primary-60; //$blue !default;
+$secondary-90:  #D7F4EC;
+$secondary-70:  #87DEC5;
+$secondary-50:  #36C99F;
+$secondary-35:  #268C6F;
 $secondary:     $secondary-50; //$gray-600 !default;
-$success:       $green; //$green !default;
+$natural-95:    #F0F3F5;
+$natural-90:    #E0E5EB;
+$natural-85:    #D1D9E1;
+$natural-75:    #B2BFCC;
+$natural-60:    #8599AD;
+$natural-50:    #667F99;
+$natural-30:    #3D4D5C;
+$success-90:    #DEFCCF;
+$success-40:    #47C20A;
+$success-30:    #369108;
+$success:       $green !default;
 $info:          $cyan !default;
-$warning:       $orange; //$yellow !default;
+$warning-90:    #FFEACC;
+$warning-48:    #F58F00;
+$warning-35:    #B26800;
+$warning:       $yellow !default;
+$danger-90:     #FFD0CC;
+$danger-70:     #FF7467;
+$danger-45:     #E51300;
 $danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-900 !default;
+$light:         $white; //$gray-100 !default;
+$dark:          $black; //$gray-900 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
+  "primary-97":    $primary-97,
+  "primary-90":    $primary-90,
+  "primary-80":    $primary-80,
+  "primary-70":    $primary-70,
+  "primary-60":    $primary-60,
+  "primary-40":    $primary-40,
+  "primary-25":    $primary-25,
+  "primary":       $primary,
+
+  "secondary-90":  $secondary-90,
+  "secondary-70":  $secondary-70,
+  "secondary-50":  $secondary-50,
+  "secondary-35":  $secondary-35,
+  "secondary":     $secondary,
+
+  "natural-95":    $natural-95,
+  "natural-90":    $natural-90,
+  "natural-85":    $natural-85,
+  "natural-75":    $natural-75,
+  "natural-60":    $natural-60,
+  "natural-50":    $natural-50,
+  "natural-30":    $natural-30,
+
+  "success-90":    $success-90,
+  "success-40":    $success-40,
+  "success-30":    $success-30,
+  "success":       $success,
+
   "info":       $info,
+
+  "warning-90":    $warning-90,
+  "warning-48":    $warning-48,
+  "warning-35":    $warning-35,
   "warning":    $warning,
+
+  "danger-90":     #FFD0CC,
+  "danger-70":     #FF7467,
+  "danger-45":     #E51300,
   "danger":     $danger,
+
   "light":      $light,
   "dark":       $dark
 ) !default;
@@ -462,7 +440,7 @@ $enable-grid-classes:         true !default;
 $enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
-$enable-rfs:                  true !default;
+$enable-rfs:                  false; //true !default;
 $enable-validation-icons:     true !default;
 $enable-negative-margins:     false !default;
 $enable-deprecation-messages: true !default;
@@ -492,15 +470,13 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 
 // scss-docs-start spacer-variables-maps
 $spacer: 1rem !default;
-// $spacers: (
-//   0: 0,
-//   1: $spacer * .25,
-//   2: $spacer * .5,
-//   3: $spacer,
-//   4: $spacer * 1.5,
-//   5: $spacer * 3,
-// ) !default;
 $spacers: (
+  // 0: 0,
+  // 1: $spacer * .25,
+  // 2: $spacer * .5,
+  // 3: $spacer,
+  // 4: $spacer * 1.5,
+  // 5: $spacer * 3,
   0: 0,
   1: $spacer * .25,
   2: $spacer * .5,
@@ -513,8 +489,8 @@ $spacers: (
   9: $spacer * 3,
   10: $spacer * 4,
   11: $spacer * 4.5,
-  12: $spacer * 5
-);
+  12: $spacer * 5,
+) !default;
 // scss-docs-end spacer-variables-maps
 
 // Position
@@ -534,7 +510,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align:           null !default;
-$body-color:                $gray-900 !default;
+$body-color:                $black; //$gray-900 !default;
 $body-bg:                   $white !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
@@ -550,7 +526,7 @@ $body-emphasis-color:       $black !default;
 // Style anchor elements.
 
 $link-color:                              $primary !default;
-$link-decoration:                         underline !default;
+$link-decoration:                         none; //underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
@@ -571,7 +547,7 @@ $icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom:   0; //1rem !default;
 
 
 // Grid breakpoints
@@ -638,16 +614,16 @@ $border-widths: (
   5: 5px
 ) !default;
 $border-style:                solid !default;
-$border-color:                $gray-300 !default;
+$border-color:                $natural-85; //$gray-300 !default;
 $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
-$border-radius-sm:            .25rem !default;
-$border-radius-lg:            .5rem !default;
-$border-radius-xl:            1rem !default;
-$border-radius-xxl:           2rem !default;
+$border-radius:               1rem; //.375rem !default;
+$border-radius-sm:            .75rem; //.25rem !default;
+$border-radius-lg:            1rem; //.5rem !default;
+$border-radius-xl:            1.5rem; //1rem !default;
+$border-radius-xxl:           62.5rem; //2rem !default;
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 // fusv-disable
@@ -655,7 +631,7 @@ $border-radius-2xl:           $border-radius-xxl !default; // Deprecated in v5.3
 // fusv-enable
 
 // scss-docs-start box-shadow-variables
-$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow:                  0 0 1rem rgba(#000, .12); //0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
@@ -702,11 +678,12 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      "Noto Sans TC", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-inter:       "Inter", sans-serif, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New";
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
-$font-family-code:            var(--#{$prefix}font-monospace) !default;
+$font-family-code:            var(--#{$prefix}font-inter) !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
@@ -726,33 +703,41 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 
 $line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
+$line-height-xs:              1;
+$line-height-sm:              1.2; //1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
+$h1-font-size:                $font-size-base * 3 !default; //2.5 !default;
 $h2-font-size:                $font-size-base * 2 !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
+$lg-font-size:                $font-size-base * 1.125;
+$sm-font-size:                $font-size-base * .875;
+$xs-font-size:                $font-size-base * .75;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
 $font-sizes: (
+  0: 0,
   1: $h1-font-size,
   2: $h2-font-size,
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: $lg-font-size,
+  8: $sm-font-size,
+  9: $xs-font-size
 ) !default;
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5 !default;
+$headings-margin-bottom:      0; //$spacer * .5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+$headings-font-weight:        $font-weight-bold; //500 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables
@@ -1190,7 +1175,7 @@ $form-feedback-valid-color:         $success !default;
 $form-feedback-invalid-color:       $danger !default;
 
 $form-feedback-icon-valid-color:    $form-feedback-valid-color !default;
-$form-feedback-icon-valid:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default;
+$form-feedback-icon-valid:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1'/></svg>") !default;
 $form-feedback-icon-invalid-color:  $form-feedback-invalid-color !default;
 $form-feedback-icon-invalid:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>") !default;
 // scss-docs-end form-feedback-variables
@@ -1256,11 +1241,11 @@ $zindex-levels: (
 
 // scss-docs-start nav-variables
 $nav-link-padding-y:                .5rem !default;
-$nav-link-padding-x:                1rem !default;
+$nav-link-padding-x:                1.5rem; //1rem !default;
 $nav-link-font-size:                null !default;
 $nav-link-font-weight:              null !default;
-$nav-link-color:                    var(--#{$prefix}link-color) !default;
-$nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default;
+$nav-link-color:                    $black; //var(--#{$prefix}link-color) !default;
+$nav-link-hover-color:              $black; //var(--#{$prefix}link-hover-color) !default;
 $nav-link-transition:               color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
 $nav-link-disabled-color:           var(--#{$prefix}secondary-color) !default;
 $nav-link-focus-box-shadow:         $focus-ring-box-shadow !default;
@@ -1274,8 +1259,8 @@ $nav-tabs-link-active-bg:           var(--#{$prefix}body-bg) !default;
 $nav-tabs-link-active-border-color: var(--#{$prefix}border-color) var(--#{$prefix}border-color) $nav-tabs-link-active-bg !default;
 
 $nav-pills-border-radius:           var(--#{$prefix}border-radius) !default;
-$nav-pills-link-active-color:       $component-active-color !default;
-$nav-pills-link-active-bg:          $component-active-bg !default;
+$nav-pills-link-active-color:       $black; //$component-active-color !default;
+$nav-pills-link-active-bg:          $natural-90; //$component-active-bg !default;
 
 $nav-underline-gap:                 1rem !default;
 $nav-underline-border-width:        .125rem !default;
@@ -1286,17 +1271,17 @@ $nav-underline-link-active-color:   var(--#{$prefix}emphasis-color) !default;
 // Navbar
 
 // scss-docs-start navbar-variables
-$navbar-padding-y:                  $spacer * .5 !default;
+$navbar-padding-y:                  $spacer * .75; //.5 !default;
 $navbar-padding-x:                  null !default;
 
-$navbar-nav-link-padding-x:         .5rem !default;
+$navbar-nav-link-padding-x:         1.5rem; //.5rem !default;
 
 $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
 $navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
-$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) * .5 !default;
-$navbar-brand-margin-end:           1rem !default;
+$navbar-brand-padding-y:            0; //($nav-link-height - $navbar-brand-height) * .5 !default;
+$navbar-brand-margin-end:           0; //1rem !default;
 
 $navbar-toggler-padding-y:          .25rem !default;
 $navbar-toggler-padding-x:          .75rem !default;
@@ -1305,9 +1290,9 @@ $navbar-toggler-border-radius:      $btn-border-radius !default;
 $navbar-toggler-focus-width:        $btn-focus-width !default;
 $navbar-toggler-transition:         box-shadow .15s ease-in-out !default;
 
-$navbar-light-color:                rgba(var(--#{$prefix}emphasis-color-rgb), .65) !default;
-$navbar-light-hover-color:          rgba(var(--#{$prefix}emphasis-color-rgb), .8) !default;
-$navbar-light-active-color:         rgba(var(--#{$prefix}emphasis-color-rgb), 1) !default;
+$navbar-light-color:                $black; //rgba(var(--#{$prefix}emphasis-color-rgb), .65) !default;
+$navbar-light-hover-color:          $black; //rgba(var(--#{$prefix}emphasis-color-rgb), .8) !default;
+$navbar-light-active-color:         $black; //rgba(var(--#{$prefix}emphasis-color-rgb), 1) !default;
 $navbar-light-disabled-color:       rgba(var(--#{$prefix}emphasis-color-rgb), .3) !default;
 $navbar-light-icon-color:           rgba($body-color, .75) !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
@@ -1401,7 +1386,7 @@ $pagination-color:                  var(--#{$prefix}link-color) !default;
 $pagination-bg:                     var(--#{$prefix}body-bg) !default;
 $pagination-border-radius:          var(--#{$prefix}border-radius) !default;
 $pagination-border-width:           var(--#{$prefix}border-width) !default;
-$pagination-margin-start:           calc(#{$pagination-border-width} * -1) !default; // stylelint-disable-line function-disallowed-list
+$pagination-margin-start:           calc(-1 * #{$pagination-border-width}) !default; // stylelint-disable-line function-disallowed-list
 $pagination-border-color:           var(--#{$prefix}border-color) !default;
 
 $pagination-focus-color:            var(--#{$prefix}link-hover-color) !default;
@@ -1493,8 +1478,8 @@ $accordion-icon-active-color:             $primary-text-emphasis !default;
 $accordion-icon-transition:               transform .2s ease-in-out !default;
 $accordion-icon-transform:                rotate(-180deg) !default;
 
-$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-color}' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>") !default;
-$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-active-color}' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>") !default;
+$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-color}' stroke-linecap='round' stroke-linejoin='round'><path d='m2 5 6 6 6-6'/></svg>") !default;
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-active-color}' stroke-linecap='round' stroke-linejoin='round'><path d='m2 5 6 6 6-6'/></svg>") !default;
 // scss-docs-end accordion-variables
 
 // Tooltips
@@ -1606,7 +1591,7 @@ $modal-dialog-margin-y-sm-up:       1.75rem !default;
 
 $modal-title-line-height:           $line-height-base !default;
 
-$modal-content-color:               null !default;
+$modal-content-color:               var(--#{$prefix}body-color) !default;
 $modal-content-bg:                  var(--#{$prefix}body-bg) !default;
 $modal-content-border-color:        var(--#{$prefix}border-color-translucent) !default;
 $modal-content-border-width:        var(--#{$prefix}border-width) !default;
@@ -1751,6 +1736,7 @@ $carousel-control-width:             15% !default;
 $carousel-control-opacity:           .5 !default;
 $carousel-control-hover-opacity:     .9 !default;
 $carousel-control-transition:        opacity .15s ease !default;
+$carousel-control-icon-filter:       null !default;
 
 $carousel-indicator-width:           30px !default;
 $carousel-indicator-height:          3px !default;
@@ -1768,17 +1754,17 @@ $carousel-caption-spacer:            1.25rem !default;
 
 $carousel-control-icon-width:        2rem !default;
 
-$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") !default;
-$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0'/></svg>") !default;
+$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/></svg>") !default;
 
 $carousel-transition-duration:       .6s !default;
 $carousel-transition:                transform $carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
 // scss-docs-end carousel-variables
 
 // scss-docs-start carousel-dark-variables
-$carousel-dark-indicator-active-bg:  $black !default;
-$carousel-dark-caption-color:        $black !default;
-$carousel-dark-control-icon-filter:  invert(1) grayscale(100) !default;
+$carousel-dark-indicator-active-bg:  $black !default; // Deprecated in v5.3.4
+$carousel-dark-caption-color:        $black !default; // Deprecated in v5.3.4
+$carousel-dark-control-icon-filter:  invert(1) grayscale(100) !default; // Deprecated in v5.3.4
 // scss-docs-end carousel-dark-variables
 
 
@@ -1805,13 +1791,14 @@ $btn-close-height:           $btn-close-width !default;
 $btn-close-padding-x:        .25em !default;
 $btn-close-padding-y:        $btn-close-padding-x !default;
 $btn-close-color:            $black !default;
-$btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
+$btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/></svg>") !default;
 $btn-close-focus-shadow:     $focus-ring-box-shadow !default;
 $btn-close-opacity:          .5 !default;
 $btn-close-hover-opacity:    .75 !default;
 $btn-close-focus-opacity:    1 !default;
 $btn-close-disabled-opacity: .25 !default;
-$btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%) !default;
+$btn-close-filter:           null !default;
+$btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%) !default; // Deprecated in v5.3.4
 // scss-docs-end close-variables
 
 

@@ -1,0 +1,10 @@
+.account {
+    .nav-pills {
+        gap: $spacer * 1.5;
+    }
+
+    .nav-link {
+        padding: $spacer * .75 $spacer * 1.25;
+        background-color: $white;
+    }
+}
