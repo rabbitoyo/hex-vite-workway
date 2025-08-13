@@ -1,0 +1,9 @@
+.navbar-nav {
+    gap: $spacer * .75;
+}
+
+.nav-link {
+    &:hover, &.active {
+        background-color: $natural-90;
+    }
+}

@@ -1,0 +1,13 @@
+.modal-header {
+    .btn-close {
+        padding: .625rem;
+    }
+}
+
+.modal-footer {
+    padding: $spacer $spacer * 1.5;
+}
+
+.modal-footer > * {
+    margin: 0;
+}

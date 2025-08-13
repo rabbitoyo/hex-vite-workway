@@ -14,8 +14,13 @@
 // base
 @import './base/base';
 
+// components
+@import './components/button';
+@import './components/modal';
+@import './components/navbar';
+
 // layout
-@import './layout/nav';
+@import './layout/header';
 @import './layout/footer';
 
 // pages

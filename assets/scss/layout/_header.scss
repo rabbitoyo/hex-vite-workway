@@ -1,0 +1,9 @@
+.avatar {
+    img {
+        max-width: 44px;
+    }
+
+    &:hover span {
+        text-decoration: underline;
+    }
+}
