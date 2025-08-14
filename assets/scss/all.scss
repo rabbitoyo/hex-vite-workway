@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&display=swap');
+
 
 // bootstrap
 @import 'bootstrap/scss/functions';
@@ -15,6 +16,7 @@
 @import './base/base';
 
 // components
+@import './components/forms';
 @import './components/button';
 @import './components/modal';
 @import './components/navbar';
@@ -25,4 +27,4 @@
 
 // pages
 @import './pages/index';
-@import './pages/account';
+@import './pages/member';

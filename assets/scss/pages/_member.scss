@@ -1,0 +1,35 @@
+.account {
+    .nav-pills {
+        gap: $spacer * 1.5;
+    }
+
+    .nav-link {
+        padding: $spacer * .75 $spacer * 1.25;
+        background-color: $white;
+    }
+
+    .avatar {
+        max-width: 120px;
+    }
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+thead {
+    th {
+        padding: .75rem;
+        font-size: .875rem;
+        line-height: 1.2;
+    }
+}
+
+// 可去除 active 狀態的 hover 背景效果
+// .table-hover > tbody > tr.table-active {
+//     --bs-table-hover-bg: initial;
+// }
+
+.table-hover > tbody > tr.table-active:hover > * {
+    color: $natural-60;
+}
