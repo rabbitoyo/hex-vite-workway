@@ -1,4 +1,17 @@
 footer {
     border-top: 1px solid transparent;
     border-image: linear-gradient(to right, rgba($natural-85, 0), $natural-85, rgba($natural-85, 0)) 1;
+
+    .nav {
+        @include media-breakpoint-down(md) {
+            row-gap: .5rem;
+        }
+    }
+
+    .nav-link {
+        @include media-breakpoint-down(md) {
+            --bs-nav-link-padding-x: 1rem;
+            --bs-nav-link-font-size: .875rem;
+        }
+    }
 }

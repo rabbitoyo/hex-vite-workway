@@ -1,10 +1,29 @@
+// font-size-responsive
 $utilities: map-merge(
     $utilities,(
         "font-size":
         map-merge(
             map-get($utilities, "font-size"),(
-                responsive: true,
+                responsive: true
             )
         ),
     )
 );
+
+// font-size
+$mobile-font-sizes: (
+  h1: 2,
+  h2: 1.75,
+  h3: 1.5,
+  h4: 1.25,
+  h5: 1.125,
+  h6: 1
+);
+
+@include media-breakpoint-down(md) {
+    @each $name, $size in $mobile-font-sizes {
+        #{$name}, .#{$name} {
+            font-size: $font-size-base * $size;
+        }
+    }
+}

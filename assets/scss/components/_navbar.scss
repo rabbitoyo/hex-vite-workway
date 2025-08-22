@@ -1,9 +1,40 @@
+.navbar {
+    @include media-breakpoint-down(lg) {
+        --bs-navbar-padding-y: .875rem;
+    }
+}
+
+.navbar-brand {
+    @include media-breakpoint-down(lg) {
+        max-width: 92px;
+    }
+}
+
 .navbar-nav {
     gap: $spacer * .75;
 }
 
+.navbar-toggler {
+    border: 0; 
+
+    &:hover {
+        background-color: $natural-90;
+    }
+}
+
 .nav-link {
+    @include media-breakpoint-down(md) {
+        --bs-nav-link-font-size: .875rem;
+    }
+
     &:hover, &.active {
         background-color: $natural-90;
+    }
+    
+    // rounded
+    &.rounded {
+        @include media-breakpoint-down(md) {
+            --bs-border-radius: .75rem;
+        }
     }
 }

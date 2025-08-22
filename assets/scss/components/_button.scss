@@ -1,18 +1,78 @@
-.btn-outline-light, .btn-outline-light.show, .btn-outline-light:focus, .btn-outline-light:focus-visible {
-    border-radius: $border-radius;
-    border: 1px solid $natural-85;
-    color: $black;
-
-    &:active, :not(.btn-check) &:active, &:hover {
-        color: $black;
-        background-color: $natural-85;
+// mixins include 修改
+.btn {
+    @include media-breakpoint-down(md) {
+        --bs-btn-border-radius: .75rem;
+        --bs-btn-padding-x: .75rem;
+        --bs-btn-padding-y: .65rem;
+        --bs-btn-font-size: .875rem;
     }
+
+    // rounded
+    &.rounded {
+        @include media-breakpoint-down(md) {
+            --bs-border-radius: .75rem;
+        }
+    }
+}
+
+.btn-outline-light {
+    @include button-outline-variant(
+        $natural-85,    //border-color
+
+        $black,         //hover-color
+
+        $natural-85,    //active-bg
+        $natural-85,    //active-border-color
+        $black          //active-color
+    );
+    --bs-btn-color: #{$black};
 }
 
 .btn-dark {
-    &:active, :not(.btn-check) &:active, &:hover, &:focus, &:focus-visible {
-        border: 1px solid $secondary-50;
-        color: $black;
-        background-color: $secondary-50;
-    }
+    @include button-variant(
+        $black,         // background
+        $black,         // border
+        $white,         // color
+
+        $secondary-50,  // hover-background
+        $secondary-50,  // hover-border
+        $black,         // hover-color
+
+        $secondary-50,  // active-background
+        $secondary-50,  // active-border  
+        $black          // active-color
+    )
 }
+
+.btn-outline-light, .btn-dark {
+    --bs-btn-focus-box-shadow: none;
+}
+
+// 變數修改
+/*.btn-outline-light {
+    --bs-btn-color: #{$black};
+    --bs-btn-border-color: #{$natural-85};
+    --bs-btn-border-radius: #{$border-radius};
+
+    --bs-btn-hover-color: #{$black};
+    --bs-btn-hover-bg: #{$natural-85};
+    --bs-btn-hover-border-color: #{$natural-85};
+
+    --bs-btn-active-color: #{$black};
+    --bs-btn-active-bg: #{$natural-85};
+    --bs-btn-active-border-color: #{$natural-85};
+
+    --bs-btn-focus-shadow-rgb: none;
+}
+
+.btn-dark {
+    --bs-btn-hover-color: #{$black};
+    --bs-btn-hover-bg: #{$secondary-50};
+    --bs-btn-hover-border-color: #{$secondary-50};
+
+    --bs-btn-active-color: #{$black};
+    --bs-btn-active-bg: #{$secondary-50};
+    --bs-btn-active-border-color: #{$secondary-50};
+
+    --bs-btn-focus-box-shadow: none;
+}*/

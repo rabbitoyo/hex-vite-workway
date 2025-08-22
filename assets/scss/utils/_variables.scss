@@ -366,20 +366,20 @@ $theme-colors: (
   "success-30":    $success-30,
   "success":       $success,
 
-  "info":       $info,
+  "info":          $info,
 
   "warning-90":    $warning-90,
   "warning-48":    $warning-48,
   "warning-35":    $warning-35,
-  "warning":    $warning,
+  "warning":       $warning,
 
-  "danger-90":     #FFD0CC,
-  "danger-70":     #FF7467,
-  "danger-45":     #E51300,
-  "danger":     $danger,
+  "danger-90":     $danger-90,
+  "danger-70":     $danger-70,
+  "danger-45":     $danger-45,
+  "danger":        $danger,
 
-  "light":      $light,
-  "dark":       $dark
+  "light":         $light,
+  "dark":          $dark
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -1243,7 +1243,7 @@ $zindex-levels: (
 // scss-docs-start nav-variables
 $nav-link-padding-y:                .5rem !default;
 $nav-link-padding-x:                1.5rem; //1rem !default;
-$nav-link-font-size:                null !default;
+$nav-link-font-size:                1rem; //null !default;
 $nav-link-font-weight:              null !default;
 $nav-link-color:                    $black; //var(--#{$prefix}link-color) !default;
 $nav-link-hover-color:              $black; //var(--#{$prefix}link-hover-color) !default;
@@ -1284,12 +1284,12 @@ $navbar-brand-height:               $navbar-brand-font-size * $line-height-base 
 $navbar-brand-padding-y:            0; //($nav-link-height - $navbar-brand-height) * .5 !default;
 $navbar-brand-margin-end:           0; //1rem !default;
 
-$navbar-toggler-padding-y:          .25rem !default;
-$navbar-toggler-padding-x:          .75rem !default;
-$navbar-toggler-font-size:          $font-size-lg !default;
-$navbar-toggler-border-radius:      $btn-border-radius !default;
-$navbar-toggler-focus-width:        $btn-focus-width !default;
-$navbar-toggler-transition:         box-shadow .15s ease-in-out !default;
+$navbar-toggler-padding-y:          .625rem; //.25rem !default;
+$navbar-toggler-padding-x:          .625rem; //.75rem !default;
+$navbar-toggler-font-size:          1rem; //$font-size-lg !default;
+$navbar-toggler-border-radius:      .75rem; //$btn-border-radius !default;
+$navbar-toggler-focus-width:        0; //$btn-focus-width !default;
+$navbar-toggler-transition:         none; //box-shadow .15s ease-in-out !default;
 
 $navbar-light-color:                $black; //rgba(var(--#{$prefix}emphasis-color-rgb), .65) !default;
 $navbar-light-hover-color:          $black; //rgba(var(--#{$prefix}emphasis-color-rgb), .8) !default;
@@ -1595,7 +1595,7 @@ $modal-title-line-height:           $line-height-base !default;
 $modal-content-color:               var(--#{$prefix}body-color) !default;
 $modal-content-bg:                  var(--#{$prefix}body-bg) !default;
 $modal-content-border-color:        var(--#{$prefix}border-color-translucent) !default;
-$modal-content-border-width:        var(--#{$prefix}border-width) !default;
+$modal-content-border-width:        0; //var(--#{$prefix}border-width) !default;
 $modal-content-border-radius:       $border-radius-sm; //var(--#{$prefix}border-radius-lg) !default;
 $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
 $modal-content-box-shadow-xs:       var(--#{$prefix}box-shadow-sm) !default;
@@ -1605,7 +1605,7 @@ $modal-backdrop-bg:                 $black !default;
 $modal-backdrop-opacity:            .5 !default;
 
 $modal-header-border-color:         var(--#{$prefix}border-color) !default;
-$modal-header-border-width:         $modal-content-border-width !default;
+$modal-header-border-width:         var(--#{$prefix}border-width); //$modal-content-border-width !default;
 $modal-header-padding-y:            1.125rem; //$modal-inner-padding !default;
 $modal-header-padding-x:            1.5rem; //$modal-inner-padding !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
@@ -1835,4 +1835,4 @@ $nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, remo
 
 $pre-color:                         null !default;
 
-@import "variables-dark"; // TODO: can be removed safely in v6, only here to avoid breaking changes in v5.3
+@import 'variables-dark'; // TODO: can be removed safely in v6, only here to avoid breaking changes in v5.3

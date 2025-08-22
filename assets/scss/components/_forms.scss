@@ -2,13 +2,37 @@ form {
     max-width: 656px;
 }
 
-.form-floating > .form-control:focus ~ label, 
-.form-floating > .form-control:not(:placeholder-shown) ~ label{
-    color: $natural-50;
+.form-floating {
+    > label {
+        white-space: inherit; 
+        text-overflow: inherit;
+        overflow: visible;
+        @include media-breakpoint-down(sm) {
+            font-size: .875rem;
+        }
+    }
+
+    > .form-control:focus ~ label,
+    > .form-control:not(:placeholder-shown) ~ label {
+        color: $natural-50;
+    }
+
+    > .form-control:focus ~ label,
+    > .form-control:not(:placeholder-shown) ~ label,
+    > .form-control-plaintext ~ label,
+    > .form-select ~ label {
+        transform: scale(.85) translateY(-.75rem) translateX(.15rem);
+
+        @include media-breakpoint-down(md) {
+            transform: scale(.85) translateY(-.6rem) translateX(.15rem);
+        }
+    }
 }
 
-.form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-control-plaintext ~ label, .form-floating > .form-select ~ label {
-    transform: scale(.85) translateY(-.75rem) translateX(.15rem);
+.form-check-inline {
+    @include media-breakpoint-down(sm) {
+        margin-right: 1rem;
+    }
 }
 
 $checkmark-color: $white;
