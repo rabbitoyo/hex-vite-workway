@@ -7,10 +7,7 @@
 
 .member {
     .nav-pills {
-        gap: $spacer * 1.5;
-
         @include media-breakpoint-down(md) {
-            gap: $spacer;
             --bs-nav-pills-border-radius: .75rem;
         }
     }
@@ -33,7 +30,7 @@
     }
 
     @include media-breakpoint-down(sm) {
-        .dropdown-toggle{
+        .dropdown-toggle {
             border: 0;
             --bs-btn-padding-x: .625rem;
             --bs-btn-padding-y: .625rem;
