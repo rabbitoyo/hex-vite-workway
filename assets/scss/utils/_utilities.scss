@@ -17,7 +17,7 @@ $mobile-font-sizes: (
   h3: 1.5,
   h4: 1.25,
   h5: 1.125,
-  h6: 1
+  h6: .875,
 );
 
 @include media-breakpoint-down(md) {
@@ -25,5 +25,22 @@ $mobile-font-sizes: (
         #{$name}, .#{$name} {
             font-size: $font-size-base * $size;
         }
+    }
+}
+
+//link
+.link-light {
+    &:hover, &:focus {
+        color: $white !important;
+        text-decoration-color: $white !important;
+        text-decoration: underline;
+    }
+}
+
+.link-dark {
+    &:hover, &:focus {
+        color: $black !important;
+        text-decoration-color: $black !important;
+        text-decoration: underline;
     }
 }

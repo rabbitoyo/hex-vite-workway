@@ -1,0 +1,62 @@
+.bg-basemap {
+    background: url("../images/service/banner-bg-pc.png") no-repeat center center $natural-95;
+    background-size: cover;
+
+    .container {
+        &::after {
+            content: "";
+            position: absolute;
+            right: 8.75rem;
+            bottom: -5.5rem;
+            width: 160px;
+            height: 120px;
+            background: url("../images/service/banner-person.svg") no-repeat center center;
+            background-size: cover;;
+            z-index: 0;
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+    }
+}
+
+.dialog {
+    border-radius: .75rem;
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        bottom: -8px;
+        left: 50%;
+        background-color: $white;
+        transform: translate(-50%) rotate(45deg);
+        z-index: -1;
+    }
+}
+
+.company-info {
+    th {
+        min-width: 120px;
+        width: 120px;
+    }
+
+    .map {
+        height: 400px;
+        @include media-breakpoint-down(sm) {
+            height: 200px;
+        }
+    }
+
+    .bg-pattern {
+        height: 280px;
+    }
+}
+
+.border-bottom-dash {
+    border-bottom: 1px dashed $natural-85;
+}
