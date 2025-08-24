@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>關於職旅 - 職旅 Workway</title>
+	<link rel="icon" href="../assets/images/favicon.ico">
+</head>
+<body>
+	<%- include('./layout/header'); -%>
+
+    <section class="bg-basemap py-9 py-md-12">
+        <div class="container text-center position-relative px-sm-6">
+			<div class="row justify-content-center">
+				<div class="col-xxl-8 col-xl-7 col-lg-9">
+					<div class="px-sm-5">
+						<h2 class="h1 mb-6 mb-md-9">服務方案</h2>
+						<p class="text-natural-50 fs-6 fs-md-7">我們最全面的服務方案，為您提供從評估、規劃到實踐的完整支持。不再擔心轉型過程中的各種挑戰，我們的專家團隊將全程陪伴，確保您順利實現職業自由。</p>
+					</div>
+				</div>
+			</div>
+        </div>
+    </section>
+    <section class="py-9 py-md-12">
+        <div class="container">
+            <div class="text-center mb-1">
+                <img src="../assets/images/service/goal.svg" alt="goal">
+            </div>
+            <h3 class="h2 text-center mb-6">職涯轉型全程計畫</h3>
+            <p class="text-natural-50 text-center fs-6 fs-md-7">從企業到自由，無縫轉型之旅</p>
+            <ul class="service-list list-unstyled">
+                <li>
+                    <input type="radio" name="service-plan" id="service-1" value="職涯轉型全程計畫" checked>
+                    <label class="d-flex rounded-4 shadow" for="service-1">
+                        <div class="me-6">
+                            <p class="text-primary">全面方案</p>
+
+                        </div>
+                        <img src="../assets/images/service/plan-1.svg" alt="職涯轉型全程計畫">
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="service-plan" id="service-2" value="自由工作加速計畫">
+                    <label class="d-flex rounded-4 shadow" for="service-2">
+                        <div class="me-6">
+                            <p class="text-primary">全面方案</p>
+
+                        </div>
+                        <img src="../assets/images/service/plan-2.svg" alt="自由工作加速計畫">
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="service-plan" id="service-3" value="數位游牧生活計畫">
+                    <label class="d-flex rounded-4 shadow" for="service-3">
+                        <div class="me-6">
+                            <p class="text-primary">全面方案</p>
+
+                        </div>
+                        <img src="../assets/images/service/plan-3.svg" alt="數位游牧生活計畫">
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </section>
+	<%- include('./layout/call-to-action'); -%>
+
+	<%- include('./layout/footer'); -%>
+
+    <%- include('./layout/modal'); -%>
+	
+	<script type="module" src="../main.js"></script>
+</body>
+</html>

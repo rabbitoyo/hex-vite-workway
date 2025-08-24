@@ -1,9 +1,9 @@
 .bg-basemap {
-    background: url("../images/service/banner-bg-pc.png") no-repeat center center $natural-95;
+    background: url("../images/service/banner-bg-pc.png") no-repeat center top $natural-95;
     background-size: cover;
 
     @include media-breakpoint-down(md) {
-        background: url("../images/service/banner-bg.png") repeat left center $natural-95;
+        background: url("../images/service/banner-bg.png") repeat left top $natural-95;
         background-size: contain;
     }
 
