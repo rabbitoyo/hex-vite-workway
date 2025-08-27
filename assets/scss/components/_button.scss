@@ -44,7 +44,23 @@
     )
 }
 
-.btn-outline-light, .btn-dark {
+.btn-secondary {
+    @include button-variant(
+        $secondary-50,  // background
+        $secondary-50,  // border
+        $black,         // color
+
+        $primary,       // hover-background
+        $primary,       // hover-border
+        $white,         // hover-color
+
+        $primary,       // active-background
+        $primary,       // active-border  
+        $white          // active-color
+    )
+}
+
+.btn-outline-light, .btn-dark, .btn-secondary {
     --bs-btn-focus-box-shadow: none;
 }
 

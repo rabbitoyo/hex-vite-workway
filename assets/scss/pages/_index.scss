@@ -1,0 +1,58 @@
+.workway {
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 800px;
+        height: 800px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url("../images/index/gradient-ball.png") no-repeat center center;
+        background-size: cover;
+    }
+}
+
+.workway-info {
+    max-width: 815px;
+}
+
+.banner {
+    width: 100%;
+
+    img {
+        max-width: 608px;
+    }
+}
+
+.story {
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        left: 0;
+        bottom: 0;
+        background: $natural-95;
+    }
+
+    .bleed-right {
+        width: calc(50vw + (100% / 6) + (var(--bs-gutter-x)));
+    }
+}
+
+.story-cover {
+    .card {
+        max-width: 400px;
+
+        @include media-breakpoint-down(md) {
+            --bs-card-border-radius: 1rem;
+        }
+    }
+    .card-img, .card-img-top {
+        @include media-breakpoint-down(md) {
+            --bs-card-inner-border-radius: 1rem;
+        }
+    }
+}

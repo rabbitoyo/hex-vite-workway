@@ -30,7 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // ---------- consultantTeam ----------
     const consultantTeam = new Swiper('.consultant-team', {
+        spaceBetween: 24,
+        slidesPerView: "auto",
+    })
+
+    // ---------- consultantTeam ----------
+    const storyCover = new Swiper('.story-cover', {
         spaceBetween: 24,
         slidesPerView: "auto",
     })
