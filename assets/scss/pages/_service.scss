@@ -2,4 +2,38 @@
     input[type="radio"] {
         display: none;
     }
+
+    label {
+        border: 2px solid transparent;
+        position: relative;
+        transition: .15s;
+        overflow: hidden;
+    }
+
+    input[type="radio"]:checked + label {
+        border: 2px solid $secondary;
+
+        &::before {
+            content: "HOT";
+            border-bottom-right-radius: .75rem;
+            display: block;
+            position: absolute;
+            padding: .5rem 1rem;
+            left: -2px;
+            top: -2px;
+            font-size: .875rem;
+            font-weight: 700;
+            font-family: $font-family-inter;
+            background-color: $secondary;
+        }
+    }
+}
+
+.member-plan {
+    .bg-pattern {
+        height: 300px;
+    }
+    .img-fluid:nth-child(2), .img-fluid:nth-child(3) {
+        bottom: -1px;
+    }
 }
