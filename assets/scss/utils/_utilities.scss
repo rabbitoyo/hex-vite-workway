@@ -29,6 +29,13 @@ $mobile-font-sizes: (
     }
 }
 
+// pseudo
+@mixin pseudo {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
 //link
 .link-light {
     &:hover, &:focus {

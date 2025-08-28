@@ -1,8 +1,6 @@
 .workway {
     &::before {
-        content: "";
-        display: block;
-        position: absolute;
+        @include pseudo;
         width: 800px;
         height: 800px;
         top: 50%;
@@ -27,9 +25,7 @@
 
 .story {
     &::before {
-        content: "";
-        display: block;
-        position: absolute;
+        @include pseudo;
         width: 100%;
         height: 200px;
         left: 0;
@@ -50,9 +46,70 @@
             --bs-card-border-radius: 1rem;
         }
     }
+
     .card-img, .card-img-top {
         @include media-breakpoint-down(md) {
             --bs-card-inner-border-radius: 1rem;
         }
     }
+}
+
+.workway-why {
+    .container {
+        &::before {
+            @include pseudo;
+            width: 196px;
+            height: 196px;
+            right: calc(var(--bs-gutter-x) * 0.5);
+            top: 0;
+            background: url("../images/index/adv-vectors.svg") no-repeat center center;
+            background-size: cover;
+        }
+    }
+}
+
+.workway-select {
+    background-color: rgba($black, .5);
+    opacity: 0;
+    transition: .3s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.workway-badge {
+    border-top-right-radius: .75rem;
+}
+
+.workway-text {
+    &::after {
+        @include pseudo;
+        position: relative;
+        width: 100%;
+        height: 1px;
+        background-color: $natural-85;
+    }
+}
+
+.workway-partner {
+    &::before {
+        @include pseudo;
+        width: 800px;
+        height: 800px;
+        top: 8.75rem;
+        right: -11.25rem;
+        background: url("../images/index/gradient-ball.png") no-repeat center center;
+        background-size: cover;
+    }
+}
+
+.step-badge {
+    border-top-left-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+    padding: .4rem 1rem;
+}
+
+.qa {
+    background: url("../images/index/bg-grid.png") repeat left top;
 }

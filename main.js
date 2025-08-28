@@ -31,15 +31,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ---------- consultantTeam ----------
-    const consultantTeam = new Swiper('.consultant-team', {
+    new Swiper('.consultant-team', {
         spaceBetween: 24,
-        slidesPerView: "auto",
+        slidesPerView: 'auto',
     })
 
     // ---------- consultantTeam ----------
-    const storyCover = new Swiper('.story-cover', {
+    new Swiper('.story-cover', {
         spaceBetween: 24,
-        slidesPerView: "auto",
+        loop: true,
+        autoplay: {
+            delay: 1500,
+        },
+        slidesPerView: 'auto',
     })
 
 });
