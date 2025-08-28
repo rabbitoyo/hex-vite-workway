@@ -30,19 +30,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ---------- consultantTeam ----------
+    // ---------- consultant-team ----------
     new Swiper('.consultant-team', {
         spaceBetween: 24,
         slidesPerView: 'auto',
     })
 
-    // ---------- consultantTeam ----------
+    // ---------- story-cover ----------
     new Swiper('.story-cover', {
         spaceBetween: 24,
         loop: true,
         autoplay: {
             delay: 1500,
         },
+        slidesPerView: 'auto',
+    })
+
+    // ---------- serve ----------
+    new Swiper('.serve', {
         slidesPerView: 'auto',
     })
 

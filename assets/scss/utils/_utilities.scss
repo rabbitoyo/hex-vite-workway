@@ -36,7 +36,15 @@ $mobile-font-sizes: (
     position: absolute;
 }
 
-//link
+// border
+.border-bottom-dash {
+    border-bottom: 1px dashed $natural-85;
+}
+.border-top-dash {
+    border-top: 1px dashed $natural-85;
+}
+
+// link
 .link-light {
     &:hover, &:focus {
         color: $white !important;

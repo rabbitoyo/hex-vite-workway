@@ -1,0 +1,18 @@
+.accordion-button::after {
+    display: none;
+}
+
+.accordion-button {
+    .material-symbols-outlined {
+        color: $black;
+        transition: transform .2s ease;
+    }
+}
+
+.accordion-button:not(.collapsed) {
+    .material-symbols-outlined {
+        color: $primary;
+        transform: rotate(-90deg);
+        transform-origin: center center;
+    }
+}

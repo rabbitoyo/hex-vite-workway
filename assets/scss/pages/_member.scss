@@ -117,13 +117,13 @@
 }
 
 .contact {
-    .col-xxl-10 {
+    .position-relative {
         &::before {
             @include pseudo;
             width: 120px;
             height: 160px;
             top: 0;
-            right: 3.25rem;
+            right: 2.5rem;
             background: url("../images/contact/form-top.svg") no-repeat center center;
             background-size: cover;
             @include media-breakpoint-down(lg) {
