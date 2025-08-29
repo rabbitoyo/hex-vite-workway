@@ -7,6 +7,12 @@
         --bs-btn-font-size: .875rem;
     }
 
+    &.btn-lg {
+        @include media-breakpoint-down(md) {
+            --bs-btn-font-size: 1.25rem;
+        }
+    }
+
     // rounded
     &.rounded {
         @include media-breakpoint-down(md) {

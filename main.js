@@ -38,17 +38,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ---------- story-cover ----------
     new Swiper('.story-cover', {
-        spaceBetween: 24,
+        spaceBetween: 16,
         loop: true,
         autoplay: {
             delay: 1500,
         },
-        slidesPerView: 'auto',
+        slidesPerView: 1.02,
+        breakpoints: {
+            576: {
+                slidesPerView: "auto",
+                spaceBetween: 24,
+            },
+        }
     })
 
     // ---------- serve ----------
     new Swiper('.serve', {
-        slidesPerView: 'auto',
+        spaceBetween: 16,
+        slidesPerView: 1.14,
+        breakpoints: {
+            576: {
+                slidesPerView: 1.5,
+                spaceBetween: 16,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+            992: {
+                slidesPerView: 2.8,
+                spaceBetween: 24,
+            },
+            1200: {
+                slidesPerView: 3.5,
+                spaceBetween: 24,
+            },
+            1400: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+            }
+        }
     })
 
 });
