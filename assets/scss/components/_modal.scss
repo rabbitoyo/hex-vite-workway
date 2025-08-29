@@ -1,12 +1,51 @@
+#loginModal, #registerModal {
+    @include media-breakpoint-down(sm) {
+        background: $white;
+
+        .shadow {
+            box-shadow: none !important;
+        }
+
+        .modal-body {
+            padding: 1.5rem .75rem;
+        }
+    }
+}
+
 .modal-dialog {
     @include media-breakpoint-down(sm) {
         --bs-modal-margin: 1.5rem;
+    }
+
+    &.modal-xl {
+        @include media-breakpoint-down(sm) {
+            --bs-modal-margin: 0;
+        }
     }
 }
 
 .modal-header {
     .btn-close {
         padding: .625rem;
+    }
+}
+
+.modal-img {
+    max-width: 700px;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    &.order-2 {
+        margin-right: -1px;
+    }
+}
+
+.modal-body {
+    form {
+        max-width: 100%;
     }
 }
 

@@ -1,4 +1,164 @@
 <!-- Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content rounded-4 shadow overflow-hidden">
+				<div class="d-flex">
+					<div class="modal-img d-none d-xl-block">
+						<img class="img-fluid" src="../assets/images/member/login.png" alt="Workway">
+					</div>
+					<div class="modal-body">
+						<div class="position-relative px-3 py-6 p-sm-6">
+							<button type="button" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close">
+								<span class="material-symbols-outlined fs-4">
+									close
+								</span>
+							</button>
+							<h2 class="h2 text-center mb-6 mb-md-9">登入</h2>
+							<form class="w-100 needs-validation" novalidate>
+								<div class="d-flex flex-column row-gap-4 border-bottom pb-6 mb-6">
+									<button type="button" class="btn btn-outline-light d-flex justify-content-center align-items-center">
+										<img src="../assets/images/member/icon-google.svg" alt="google">
+										<span class="ms-1 fs-8 fs-md-6">Google</span>
+									</button>
+									<button type="button" class="btn btn-outline-light d-flex justify-content-center align-items-center">
+										<img src="../assets/images/member/icon-discord.svg" alt="google">
+										<span class="ms-1 fs-8 fs-md-6">Discord</span>
+									</button>
+								</div>
+								<div class="form-floating mb-4">
+									<input type="email" class="form-control" id="loginEmail" placeholder="請輸入 e-mail" value="" aria-describedby="validationFeedback" required>
+									<label for="loginEmail">帳號</label>
+									<div id="validationFeedback" class="invalid-feedback">
+										<div class="d-flex align-items-center mt-1">
+											<img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+										 	請輸入帳號
+										</div>
+									</div>
+								</div>
+								<div class="form-floating mb-4">
+									<input type="password" class="form-control password" id="loginPassword" placeholder="請輸入 6-8 碼英數字" value="" maxlength="8" aria-describedby="validationFeedback" required>
+									<label for="loginPassword">密碼</label>
+									<button type="button" class="togglePassword btn border-0 position-absolute top-50 translate-middle end-0 lh-1 p-0 me-1">
+										<span class="material-symbols-outlined fs-5">visibility_off</span>
+									</button>
+									<div id="validationFeedback" class="invalid-feedback">
+										<div class="d-flex align-items-center mt-1">
+											<img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+											請輸入密碼
+										</div>
+									</div>
+								</div>
+								<div class="text-end mb-4">
+									<a href="#" class="link-natural-50 fs-8">忘記密碼</a>
+								</div>
+								<button type="submit" class="btn btn-dark d-flex justify-content-center align-items-center w-100 fs-8 fs-md-6 mb-6  mb-md-9" id="loginSubmit">送出<span class="material-symbols-outlined fs-5 ms-0 ms-sm-1">chevron_right</span></button>
+								<div class="d-flex justify-content-center align-items-center">
+									<p class="text-natural-50 fs-8 fs-md-6 fw-medium">不是會員？</p>
+									<button type="button" class="btn link-primary border-0 fs-8 fs-md-6 fw-medium p-0 ms-1 text-decoration-underline" data-bs-toggle="modal" data-bs-target="#registerModal">快速註冊</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content rounded-4 shadow overflow-hidden">
+				<div class="d-flex">
+					<div class="modal-img order-2 d-none d-xl-block">
+						<img class="img-fluid" src="../assets/images/member/register.png" alt="Workway">
+					</div>
+					<div class="modal-body order-1">
+						<div class="position-relative px-3 py-6 p-sm-6">
+							<button type="button" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close">
+								<span class="material-symbols-outlined fs-4">
+									close
+								</span>
+							</button>
+							<h2 class="h2 text-center mb-6 mb-md-9">註冊</h2>
+							<form class="w-100 needs-validation" novalidate>
+								<div class="d-flex flex-column row-gap-4 border-bottom pb-6 mb-6">
+									<button type="button" class="btn btn-outline-light d-flex justify-content-center align-items-center">
+										<img src="../assets/images/member/icon-google.svg" alt="google">
+										<span class="ms-1 fs-8 fs-md-6">Google</span>
+									</button>
+									<button type="button" class="btn btn-outline-light d-flex justify-content-center align-items-center">
+										<img src="../assets/images/member/icon-discord.svg" alt="google">
+										<span class="ms-1 fs-8 fs-md-6">Discord</span>
+									</button>
+								</div>
+								<div class="form-floating mb-4">
+									<input type="email" class="form-control" id="registerName" placeholder="請輸入 e-mail" value="" aria-describedby="validationFeedback" required>
+									<label for="registerName">姓名</label>
+									<div id="validationFeedback" class="invalid-feedback">
+										<div class="d-flex align-items-center mt-1">
+											<img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+										 	請輸入姓名
+										</div>
+									</div>
+								</div>
+								<div class="form-floating mb-4">
+									<input type="email" class="form-control" id="registerEmail" placeholder="請輸入 e-mail" value="" aria-describedby="validationFeedback" required>
+									<label for="registerEmail">信箱</label>
+									<div id="validationFeedback" class="invalid-feedback">
+										<div class="d-flex align-items-center mt-1">
+											<img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+										 	請輸入信箱
+										</div>
+									</div>
+								</div>
+								<div class="form-floating mb-4">
+									<input type="password" class="form-control password" id="registerPassword" placeholder="請輸入 6-8 碼英數字" value="" maxlength="8" aria-describedby="validationFeedback" required>
+									<label for="registerPassword">密碼</label>
+									<button type="button" class="togglePassword btn border-0 position-absolute top-50 translate-middle end-0 lh-1 p-0 me-1">
+										<span class="material-symbols-outlined fs-5">visibility_off</span>
+									</button>
+									<div id="validationFeedback" class="invalid-feedback">
+										<div class="d-flex align-items-center mt-1">
+											<img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+											請輸入密碼
+										</div>
+									</div>
+								</div>
+								<div class="form-floating mb-4">
+									<input type="password" class="form-control password" id="registerPasswordAgain" placeholder="請輸入 6-8 碼英數字" value="" maxlength="8" aria-describedby="validationFeedback" required>
+									<label for="registerPasswordAgain">確認密碼</label>
+									<button type="button" class="togglePassword btn border-0 position-absolute top-50 translate-middle end-0 lh-1 p-0 me-1">
+										<span class="material-symbols-outlined fs-5">visibility_off</span>
+									</button>
+									<div id="validationFeedback" class="invalid-feedback">
+										<div class="d-flex align-items-center mt-1">
+											<img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+											請再次輸入密碼
+										</div>
+									</div>
+								</div>
+								<div class="form-check mb-4">
+									<input class="form-check-input" type="checkbox" name="agreeTerms" id="registerAgreeTerms" value="agreeTerms" aria-describedby="validationFeedback" required>
+									<label class="form-check-label ms-1 fs-8" for="registerAgreeTerms">我同意<a href="agreement.html" class="link-primary text-decoration-underline mx-1" target="_blank">服務條款</a>和<a href="privacy.html" class="link-primary text-decoration-underline mx-1" target="_blank">隱私政策</a></label>
+									<div id="validationFeedback" class="invalid-feedback">
+										<div class="d-flex align-items-center mt-1">
+											<img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+											請勾選同意服務條款和隱私政策
+										</div>
+									</div>
+								</div>
+								<button type="submit" class="btn btn-dark d-flex justify-content-center align-items-center w-100 fs-8 fs-md-6 mb-6  mb-md-9" id="signupSubmit">送出<span class="material-symbols-outlined fs-5 ms-0 ms-sm-1">chevron_right</span></button>
+								<div class="d-flex justify-content-center align-items-center">
+									<p class="text-natural-50 fs-8 fs-md-6 fw-medium">已經會員？</p>
+									<button type="button" class="btn link-primary border-0 fs-8 fs-md-6 fw-medium p-0 ms-1 text-decoration-underline" data-bs-toggle="modal" data-bs-target="#loginModal">直接登入</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	<div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content shadow">

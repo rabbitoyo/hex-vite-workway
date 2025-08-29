@@ -7,7 +7,7 @@
             </h1>
             <ul class="navbar-nav d-none d-lg-flex column-gap-3">
                 <li class="nav-item">
-                    <a class="nav-link rounded" aria-current="page" href="service.html">服務方案</a>
+                    <a class="nav-link rounded" href="service.html">服務方案</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link rounded" href="about.html">關於職旅</a>
@@ -16,12 +16,42 @@
                     <a class="nav-link rounded" href="contact.html">聯絡我們</a>
                 </li>
             </ul>
-            <a class="avatar ms-auto ms-lg-0 me-3 me-lg-0" href="member.html">
+            <button class="btn btn-outline-light px-4 px-lg-6 py-2 ms-auto ms-lg-0 me-3 me-lg-0" id="loginBtn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                登入/註冊
+            </button>
+            <a class="avatar ms-auto ms-lg-0 me-3 me-lg-0 d-none" id="avatarLink" href="member.html">
                 <img class="img-fluid rounded-circle border" src="../assets/images/member/avatar.png" alt="avatar">
                 <span class="ms-1 font-family-inter fw-medium fs-8 fs-lg-6">Mokumaru</span>
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="modal" data-bs-target="#">
+            <a class="navbar-toggler border-0" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </a>
+            <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasMenu">
+                <div class="offcanvas-body">
+                    <div class="position-relative h-100">
+                        <button type="button" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <span class="material-symbols-outlined fs-4">
+                                close
+                            </span>
+                        </button>
+                        <div class="d-flex flex-column h-100 pt-9">
+                            <ul class="navbar-nav d-flex text-center row-gap-6 mt-3">
+                                <li class="nav-item">
+                                    <a class="nav-link rounded py-4" href="service.html">服務方案</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link rounded py-4" href="about.html">關於職旅</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link rounded py-4" href="contact.html">聯絡我們</a>
+                                </li>
+                            </ul>
+                            <button class="loginBtn btn btn-secondary fs-5 fw-bold py-1 mt-auto" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                登入/註冊
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>

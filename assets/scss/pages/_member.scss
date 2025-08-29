@@ -138,3 +138,11 @@
         width: 100%;
     }
 }
+
+.invalid-feedback {
+    background-color: $danger-90;
+}
+
+.was-validated .form-control:invalid ~ .togglePassword {
+    margin-top: -11px;
+}
