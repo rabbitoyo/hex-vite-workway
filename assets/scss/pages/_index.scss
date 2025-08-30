@@ -56,8 +56,10 @@
     }
 
     @include media-breakpoint-down(md) {
-        img[src$=".svg"] {
-            max-width: 48px;
+        .col-xxl-4 {
+            img {
+                max-width: 48px;
+            }
         }
     }
 
