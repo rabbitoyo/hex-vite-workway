@@ -39,6 +39,9 @@
     img {
         object-fit: cover;
         height: 100%;
+        @include media-breakpoint-down(xxl) {
+            height: auto;
+        }
     }
 }
 
