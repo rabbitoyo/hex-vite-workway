@@ -35,6 +35,11 @@
     .workway-info {
         max-width: 815px;
     }
+
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
 }
 
 .story {
