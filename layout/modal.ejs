@@ -91,7 +91,7 @@
 									</button>
 								</div>
 								<div class="form-floating mb-4">
-									<input type="email" class="form-control" id="registerName" placeholder="請輸入 e-mail" value="" aria-describedby="validationFeedback" required>
+									<input type="text" class="form-control" id="registerName" placeholder="請輸入姓名" value="" aria-describedby="validationFeedback" required>
 									<label for="registerName">姓名</label>
 									<div id="validationFeedback" class="invalid-feedback">
 										<div class="d-flex align-items-center mt-1">
@@ -159,7 +159,7 @@
 		</div>
 	</div>
 	
-	<div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+	<div class="modal fade passwordModal" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content shadow">
 				<div class="modal-header">
@@ -171,19 +171,31 @@
 					 </button>
 				</div>
 				<div class="modal-body">
-					<form>
+					<form class="needs-validation" novalidate>
 						<div class="form-floating mb-6">
-							<input type="password" class="form-control" id="password" placeholder="新密碼" value="">
-							<label for="password">新密碼</label>
+							<input type="password" class="form-control password" id="newPassword" placeholder="新密碼" value="" maxlength="8" aria-describedby="validationFeedback" required>
+							<label for="newPassword">新密碼</label>
+							<div id="validationFeedback" class="invalid-feedback">
+								<div class="d-flex align-items-center mt-1">
+									<img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+									請輸入密碼
+								</div>
+							</div>
 						</div>
 						<div class="form-floating">
-							<input type="password" class="form-control" id="passwordAgain" placeholder="再次密碼" value="">
-							<label for="passwordAgain">再次密碼</label>
+							<input type="password" class="form-control password" id="newPasswordAgain" placeholder="確認新密碼" value="" maxlength="8" aria-describedby="validationFeedback" required>
+							<label for="newPasswordAgain">確認新密碼</label>
+							<div id="validationFeedback" class="invalid-feedback">
+								<div class="d-flex align-items-center mt-1">
+									<img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+									請再次輸入密碼
+								</div>
+							</div>
 						</div>
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-dark d-inline-flex align-items-center justify-content-center pe-3" data-bs-dismiss="modal">更新密碼<span class="material-symbols-outlined fs-5 ms-1">chevron_right</span>
+					<button type="submit" class="btn btn-dark btn-validate d-inline-flex align-items-center justify-content-center pe-3">更新密碼<span class="material-symbols-outlined fs-5 ms-1">chevron_right</span>
 					</button>
 				</div>
 			</div>

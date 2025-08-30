@@ -23,21 +23,39 @@
                                     <h2 class="h4 fw-medium mb-0 mb-lg-3">基本資料</h2>
                                     <p class="text-natural-50 fs-8 fs-sm-6">欄位皆為<span class="badge bg-danger text-white fw-normal ms-1 fs-8">必填</span></p>
                                 </div>
-                                <form class="w-100">
+                                <form class="w-100 needs-validation" novalidate>
                                     <div class="form-floating mb-4 mb-sm-6">
-                                        <input type="text" class="form-control" id="username" placeholder="姓名" value="">
+                                        <input type="text" class="form-control" id="username" placeholder="姓名" value=""  aria-describedby="validationFeedback" required>
                                         <label for="username">姓名</label>
+                                        <div id="validationFeedback" class="invalid-feedback">
+                                            <div class="d-flex align-items-center mt-1">
+                                                <img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+                                                請填寫姓名
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-floating mb-4 mb-sm-6">
-                                        <input type="email" class="form-control" id="email" placeholder="信箱" value="" aria-describedby="emailHelp">
+                                        <input type="email" class="form-control" id="email" placeholder="信箱" value="" aria-describedby="emailHelp" required>
                                         <label for="email">信箱</label>
+                                        <div class="invalid-feedback">
+                                            <div class="d-flex align-items-center mt-1">
+                                                <img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+                                                請填寫信箱
+                                            </div>
+                                        </div>
                                         <div class="form-text ps-2" id="emailHelp">
                                             盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信
                                         </div>
                                     </div>
                                     <div class="form-floating mb-4 mb-sm-6">
-                                        <input type="tel" class="form-control" id="phone" placeholder="聯絡電話" value="" aria-describedby="phoneHelp">
+                                        <input type="tel" class="form-control" id="phone" placeholder="聯絡電話" value="" aria-describedby="phoneHelp" required>
                                         <label for="phone">聯絡電話</label>
+                                        <div class="invalid-feedback">
+                                            <div class="d-flex align-items-center mt-1">
+                                                <img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+                                                請填寫聯絡電話
+                                            </div>
+                                        </div>
                                         <div class="form-text ps-2" id="phoneHelp">
                                             我們不會以電話主動聯繫您，告知您要至ATM操作轉帳
                                         </div>
@@ -55,6 +73,12 @@
                                                 <li><a class="dropdown-item" href="#">其他</a></li>
                                             </ul>
                                         </div>
+                                        <div class="invalid-feedback">
+                                            <div class="d-flex align-items-center mt-1">
+                                                <img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+                                                請選擇目前職業/工作身分
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -63,10 +87,10 @@
                                     <h2 class="h4 fw-medium mb-0 mb-lg-3">諮詢需求</h2>
                                     <p class="text-natural-50 fs-8 fs-sm-6">欄位皆為<span class="badge bg-danger text-white fw-normal ms-1 fs-8">必填</span></p>
                                 </div>
-                                <form class="w-100">
+                                <form class="w-100 needs-validation" novalidate>
                                     <div class="mb-4 mb-sm-6">
                                         <p class="mb-2 fs-8 fs-sm-6">諮詢主題</p>
-                                        <div class="d-flex flex-wrap row-gap-2 ps-0 ps-sm-2 mb-2" aria-describedby="consultTopicsHelp">
+                                        <div class="checkbox-group d-flex flex-wrap row-gap-2 ps-0 ps-sm-2 mb-2" aria-describedby="consultTopicsHelp">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" name="consultTopics" id="consultTopics-1" value="職涯探索與方向">
                                                 <label class="form-check-label ms-1 fs-8" for="consultTopics-1">職涯探索與方向</label>
@@ -92,6 +116,12 @@
                                                 <label class="form-check-label ms-1 fs-8" for="consultTopics-6">其他（請填寫下題）</label>
                                             </div>
                                         </div>
+                                        <div class="invalid-feedback">
+                                            <div class="d-flex align-items-center mt-1">
+                                                <img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+                                                請選取至少一個諮詢主題
+                                            </div>
+                                        </div>
                                         <div class="form-text ps-0 ps-sm-2" id="consultTopicsHelp">
                                             可複選，讓我們更了解你的狀況，安排最適合的顧問與建議。
                                         </div>
@@ -106,12 +136,24 @@
                                         </div>
                                     </div>
                                     <div class="form-floating mb-4 mb-sm-6">
-                                        <textarea class="form-control" id="currentChallenge" placeholder="您目前面臨的主要挑戰" maxlength="300" style="min-height: 160px;" value=""></textarea>
+                                        <textarea class="form-control" id="currentChallenge" placeholder="您目前面臨的主要挑戰" maxlength="300" style="min-height: 160px;" value="" required></textarea>
                                         <label for="currentChallenge">您目前面臨的主要挑戰</label>
+                                        <div class="invalid-feedback">
+                                            <div class="d-flex align-items-center mt-1">
+                                                <img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+                                                請告訴我們您目前面臨的主要挑戰
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-floating">
-                                        <textarea class="form-control" id="achieveGoal" placeholder="期望達成的目標" maxlength="300" style="min-height: 160px;" value=""></textarea>
+                                        <textarea class="form-control" id="achieveGoal" placeholder="期望達成的目標" maxlength="300" style="min-height: 160px;" value="" required></textarea>
                                         <label for="achieveGoal">期望達成的目標</label>
+                                        <div class="invalid-feedback">
+                                            <div class="d-flex align-items-center mt-1">
+                                                <img class="ps-2 me-1" src="../assets/images/member/error.svg" alt="error">
+                                                請告訴我們您期望達成的目標
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -244,7 +286,7 @@
                             </div>
                             <div class="d-flex flex-column flex-md-row justify-content-center">
                                 <button type="button" class="btn btn-outline-light d-inline-flex align-items-center justify-content-center pe-2 pe-sm-3 me-0 me-md-6 order-2 order-md-1" id="resetBtn">重新填寫<span class="material-symbols-outlined fs-5 ms-0 ms-sm-1">chevron_right</span></button>
-                                <button type="button" class="btn btn-dark d-inline-flex align-items-center justify-content-center pe-2 pe-sm-3 mb-4 mb-md-0 order-1 order-md-2">確認送出<span class="material-symbols-outlined fs-5 ms-0 ms-sm-1">chevron_right</span></button>
+                                <button type="submit" class="btn btn-dark btn-validate d-inline-flex align-items-center justify-content-center pe-2 pe-sm-3 mb-4 mb-md-0 order-1 order-md-2">確認送出<span class="material-symbols-outlined fs-5 ms-0 ms-sm-1">chevron_right</span></button>
                             </div>
                         </div>
                     </div>
